@@ -1,0 +1,21 @@
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <th>ID</th>
+        <th>n°de compte</th>
+        <th>Solde</th>
+        <th> Propriétaire</th>
+        <th>Conseillé</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let uncompte of ListComptes">
+            <td>{{uncompte.idCompte}}</td>
+            <td>{{uncompte.numero}}</td>
+            <td>{{uncompte.solde}}</td>
+            <td>{{uncompte?.utilisateur?.nom}}</td>
+            <td>{{uncompte?.conseille?.nom}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+

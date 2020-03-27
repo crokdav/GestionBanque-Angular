@@ -1,0 +1,25 @@
+
+ <div class="sidenav">
+    <div class="login-main-text">
+       <h2>La banque Adaming<br> Page de connexion</h2>
+       <p>Connectez-vous ou enregistrez-vous</p>
+    </div>
+ </div>
+ <div class="main">
+    <div class="col-md-6 col-sm-12">
+       <div class="login-form">
+          <form>
+             <div class="form-group">
+                <label>Pseudo</label>
+                <input name="pseudo" class="form-control" type="text" placeholder="login"  [(ngModel)]="user.pseudo">
+             </div>
+             <div class="form-group">
+                <label>Password</label>
+                <input name="password" class="form-control" type="password" placeholder="Password" [(ngModel)]="user.password">
+             </div>
+              <button type="submit" (click)=" login()"  class="btn btn-primary" >Login</button>
+             <button type="submit"  class="btn btn-secondary" [routerLink]="['/adduser']">Register</button>
+          </form>
+       </div>
+    </div>
+ </div>

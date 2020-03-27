@@ -1,0 +1,21 @@
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <th>ID</th>
+        <th>Montant</th>
+        <th>Date</th>
+        <th>Emmeteur</th>
+        <th>Receveur</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let uneope of ListOperation">
+            <td>{{uneope.idOperation}}</td>
+            <td>{{uneope.montant}}</td>
+            <td>{{uneope.date}}</td>
+            <td>{{uneope?.emetteur?.numero}}</td>
+            <td>{{uneope?.recepteur?.numero}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+

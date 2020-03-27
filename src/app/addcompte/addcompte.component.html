@@ -1,0 +1,28 @@
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="num">numero</label>
+            <input name="num" type="text" class="form-control" id="num"  placeholder="numero..." [(ngModel)]="newCompte.numero">
+          </div>
+        <div class="form-group">
+          <label for="solde">solde</label>
+          <input name="solde" type="number" class="form-control" id="solde"  placeholder="solde..." [(ngModel)]="newCompte.solde">
+        </div>
+
+        <div class="form-group">
+            <label for="user">Propriétaire</label>
+            <select  class="form-control" name="user" id="user"[(ngModel)]="newCompte.utilisateur">
+            <option *ngFor="let unuser of listUsers" [ngValue]="unuser">{{ unuser.nom }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="conseille">Conseillé</label>
+            <select  class="form-control" name="conseille" id="conseille"[(ngModel)]="newCompte.conseille">
+            <option *ngFor="let unuser of listUsers" [ngValue]="unuser">{{ unuser.nom }}</option>
+            </select>
+          </div>
+        <button type="submit" (click)=" createCompte()" class="btn btn-primary" >Submit</button>
+    </form>
+    </div> 
+    
+
